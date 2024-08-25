@@ -1,15 +1,17 @@
-function renderSongs(songsTitle) {
-    let songList = document.querySelector(".songs-list");
+function renderSongs(songTitle) {
+let songList = document.querySelector(".songs-list");
 let songContainer = document.createElement("div");
 songContainer.classList.add("song");
 let titleElement= document.createElement("div");
-titleElement.textContent =songsTitle;
+titleElement.textContent =songTitle;
 titleElement.classList.add("title");
 let actionsElement = document.createElement("div");
 actionsElement.classList.add("actions");
+
 let playButton = document.createElement("button");
 let likeButton = document.createElement("button");
 let addButton = document.createElement("button");
+
  let imgplayButton= document.createElement("img");
  let imglikeButton= document.createElement("img");
  let imgaddButton= document.createElement("img");
@@ -18,23 +20,31 @@ let addButton = document.createElement("button");
  imgplayButton.src = './assets/play.svg';
  imgplayButton.alt = 'play music';
  imgplayButton.title = 'play music';
- imglikeButton.src = "./assets/like-svgrepo-com.svg";
+
+imglikeButton.src = "./assets/like-svgrepo-com.svg";
 imglikeButton.alt = "like";
 imglikeButton.title= "like";
+
 imgaddButton.src ="./assets/plus-square-svgrepo-com (1).svg";
 imgaddButton.alt="add";
 imgaddButton.title= "add to playlist";
 
 songList.appendChild(songContainer);
+
 songContainer.appendChild(titleElement);
 songContainer.appendChild(actionsElement);
+
 actionsElement.appendChild(playButton);
 actionsElement.appendChild(likeButton);
 actionsElement.appendChild(addButton);
+
 playButton.appendChild(imgplayButton);
 likeButton.appendChild(imglikeButton);
 addButton.appendChild(imgaddButton);
 
+addButton.addEventListener("click", function() {
+  addMusictoPlaylist(songTitle);
+});
 }
 
 let songslist =[
@@ -53,12 +63,12 @@ for(let i=0 ; i < songslist.length; i++ ){
     renderSongs(songTitle);
 }
 
-function addMusictoPlaylist(){
+function addMusictoPlaylist(songTitle){
   let songsplaylist= document.querySelector(".songs-list2");
   let songContainer = document.createElement("div");
   songContainer.classList.add("song");
   let titleElement= document.createElement("div");
-  titleElement.textContent =songslist[0]; 
+  titleElement.textContent =songTitle;
   titleElement.classList.add("title");
   let actionsElement = document.createElement("div");
   actionsElement.classList.add("actions")
@@ -67,9 +77,11 @@ function addMusictoPlaylist(){
   let removeButton= document.createElement("button");
   let imgremoveButton= document.createElement("img");
   imgremoveButton.classList.add("removefromplaylist");
+
   imgplayButton.src = './assets/play.svg';
   imgplayButton.alt = 'play music';
   imgplayButton.title = 'play music';
+
   imgremoveButton.src = './assets/minus.svg';
   imgremoveButton.alt = 'remove from playlist';
   imgremoveButton.title = 'remove from playlist';
@@ -81,14 +93,14 @@ actionsElement.appendChild(playButton);
 actionsElement.appendChild(removeButton);
 playButton.appendChild(imgplayButton);
 removeButton.appendChild(imgremoveButton);
+
+removeButton.addEventListener("click", function() {
+  songsplaylist.removeChild(songContainer);
+});
 }
 
 
 
-let selectedmusic = document.querySelectorAll(".addtoplaylist");
-selectedmusic.forEach( function(addmusic){
-  addmusic.addEventListener("click",addMusictoPlaylist)
-})
 
 
 

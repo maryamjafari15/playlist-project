@@ -1,0 +1,313 @@
+*, *::after , *::before{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    max-width: 2000px;
+    margin: auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ header{
+    background-image: url(./assets/background.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+ }
+ nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+    
+ }
+ .logo{
+    width:100px ;
+    cursor: pointer;
+    position: absolute;
+    top: 5%;
+    left: 0;
+ }
+ nav ul {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 35px;
+    left:15%;
+    
+ }
+ nav ul li{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15%;
+ }
+ nav ul li a {
+    color: rgb(42, 42, 48);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 400px;
+ }
+ .slogan{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: absolute;
+    top: 40vh;
+    left: 15vw;
+ }
+ .slogan h1 {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 100px;
+    padding-bottom: 20%;
+ }
+ .signUp{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+ }
+ .signUp a{
+    background-color: #365380;
+    padding: 15px 45px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+ }
+ 
+ .aboutSite{
+   display: flex;
+   flex-direction: column;
+    background-image: url(./assets/backgrond2.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+ }
+ @media ( max-width: 1100px ) {
+
+   .aboutSite h1{
+      font-size :40px !important;
+   }
+   main .aboutSite p{
+      font-size: 14px;
+      line-height: 20px;
+   }
+   
+ }
+ .aboutSite h1{
+   text-wrap: nowrap;
+   font-size: 60px;
+   font-weight: 600;
+   line-height: 100px;
+    position: absolute;
+    top: 20vh;
+    right:10%;
+    width: 45%;
+ }
+ .aboutSite p{
+   position: absolute;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 400;
+    top: 40vh;
+    right: 10%;
+width: 45%;
+line-height: 35px;
+
+ }
+
+ /* main  */
+ .mainSection{
+    height: 100vh;
+    width: 100%;
+ }
+ .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    height: 100%;
+    gap: 30px;
+ }
+ .container .left{
+   background-color: rgba(57, 81, 115, 0.1);
+   width: 65%;
+   height: 100%;
+   padding: 40px;
+   border-radius: 26px;
+
+ }
+.container .right{
+    background-color: rgba(57, 81, 115, 0.3);
+    width: 35%;
+    height: 100%;
+    padding: 40px;
+    border-radius: 26px;
+}
+#page-title , #playlist-title{
+   font-size: 40px;
+   border-bottom: 1px solid #000 ;
+   padding-bottom: 20px;
+
+}
+.songs-list ,.songs-list2{
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   padding-top: 20px;
+   gap: 15px;
+   height: 90%;
+   overflow: auto;
+   overflow-x: hidden;
+
+}
+.song{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgba(57, 81, 115, 0.2);
+   padding: 20px;
+   border-radius: 16px;
+}
+.song .title {
+   font-size: 20px;
+   font-weight: 600;
+}
+.actions{
+   display: flex;
+   gap:20px;
+
+}
+.actions button{
+   padding: 2px;
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+/* end main  */
+
+
+.Contactsection{
+    background-image: url(./assets/background3.png);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+
+}
+.Contact{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: space-between;
+   width: 60%;
+   padding-left: 30px;
+   margin: auto;
+   padding-top: 10%;
+   gap: 20px;
+}
+.Contact h1{
+   font-size: 30px;
+   padding-bottom: 20px;
+   color:#2c3a96;
+}
+.Contact input{
+   background: transparent;
+   border: 2px solid #2c3a96;
+   border-radius: 25px;
+   padding: 20px;
+   
+}
+.Contact textarea{
+   width: 240px;
+   height: 120px;
+    background: transparent;
+    border: 2px solid #2c3a96;
+    border-radius: 25px;
+    padding:10px;
+}
+.Contact button{
+   padding:10px 20px;
+   color:#fff;
+   background:#2c3a96 ;
+   border: 4px solid #2c3a96;
+   border-radius: 25px;
+   cursor: pointer;
+
+}
+
+footer{
+   display: flex;
+   justify-content: center;
+   align-items: start;
+    background-color: #d9dff3;
+    width: 100%;
+    height: 50vh; 
+    border-top: 1px solid rgb(142, 141, 141);
+    gap: 20%;
+    padding-top: 5%;
+}
+footer ul li{
+   padding-top: 40px;
+}
+footer ul li a {
+   text-decoration: none;
+   color: #000;
+   font-size: 20px;
+   font-weight: 400;
+   
+}
+
+
+
+
+
+
